@@ -537,23 +537,5 @@ def main(
             print('rank %d ends third barrier' % rank)
 
 if __name__ == "__main__":
-    '''
-llama 3.2 translation and primitive and bool and bridge_loop and array
-
-torchrun --nnodes 1 --nproc_per_node 2 inference_shape2code_point_input.py --model_name ../../../../llama-3-models/Llama3.2-1B --peft_model ../../../../llama-3-models/fintune_exps/translation_primitive_bool_bridge_array/predict_next_token/llama_3.2_1B_shape2code_32_gpu_bs_512_lora_r_16_run_7 \
---file_start_idx 0 --file_end_idx 500 --skip_existing_files True \
---npz_data_file '/cpfs05/shared/landmark_3dgen/lvzhaoyang_group/shape2code/debug/ChairFactory_0_sample.npz' \
---code_save_file '/cpfs05/shared/landmark_3dgen/lvzhaoyang_group/shape2code/debug/ChairFactory_0_sample/code.py'  \
---batch_size 16 --visualization --do_sample False --max_new_tokens 1024 --zero_out_normals True \
---cache_dir /cpfs05/shared/landmark_3dgen/lvzhaoyang_group/shape2code/cache
-
-
-torchrun --nnodes 1 --nproc_per_node 1 inference_shape2code_point_input.py --model_name ../../../../llama-3-models/Llama3.2-1B --peft_model ../../../../llama-3-models/fintune_exps/translation_primitive_bool_bridge_array/predict_next_token/llama_3.2_1B_shape2code_32_gpu_bs_512_lora_r_16_run_9 \
---file_start_idx 0 --file_end_idx 500 --skip_existing_files True \
---npz_data_file 'npz_files/npz_files.sh' \
---code_save_file 'npz_files/code_save_files.sh'  \
---batch_size 16 --visualization --do_sample False --max_new_tokens 1024 --zero_out_normals True \
---cache_dir '/cpfs05/shared/landmark_3dgen/lvzhaoyang_group/shape2code/cache2'
-    '''
 
     fire.Fire(main)
