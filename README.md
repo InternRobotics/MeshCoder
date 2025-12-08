@@ -77,7 +77,7 @@ python inference_shape2code_point_input.py \
     --batch_size 8 \
     --visualization \
     --do_sample False \
-    --max_new_tokens 2048 \
+    --max_new_tokens 5000 \
     --zero_out_normals True
 ```
 
@@ -102,7 +102,7 @@ torchrun \
     --batch_size 8 \
     --visualization \
     --do_sample False \
-    --max_new_tokens 2048 \
+    --max_new_tokens 5000 \
     --zero_out_normals True
 ```
 
